@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Chobits Exchange Documentation</title>
+<link rel="alternate" type="application/rss+xml" title="egrappler.com" href="feed/index.html">
+<link href="http://fonts.googleapis.com/css?family=Raleway:700,300" rel="stylesheet"
+        type="text/css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/prettify.css">
+</head>
+<body>
+<nav>
+  <div class="container">
+    <h1>CHOBITS</h1>
+  </div>
+</nav>
+<header>
+  <div class="container">
+    <h2 class="docs-header"> Chobits Exchange Documentation</h2>
+  </div>
+</header>
+<section>
+  <div class="container">
+    <ul class="docs-nav" id="menu-left">
+      <li><strong>Getting Started</strong></li>
+      <li><a href="#welcome" class=" ">Welcome</a></li>
+      <li><a href="#whatisblo" class=" ">What is B.L.O</a></li>
+      <li><a href="#whyblo" class=" ">Why Use B.L.O</a></li>
+      <li><a href="#howrig" class=" ">How to Register</a></li>
+      <li><a href="#howtop" class=" ">How to Top Up</a></li>
+      <li><a href="#howtrade" class=" ">How to Trade</a></li>
+      <li><a href="#howwithdraw" class=" ">How to Withdraw</a></li>
+      <li class="separator"></li>
+      <li><strong>About</strong></li>
+      <li><a href="#contact" class=" ">Contact Us</a></li>
+      <li><a href="#fee" class=" ">Trade Fee</a></li>
+      <li><a href="#security" class=" ">Security</a></li>
+      <li><a href="#faq" class=" ">FAQ</a></li>
+    </ul>
+    <div class="docs-content">
+	  
+      <h2> Getting Started</h2>
+	  
+      <h3 id="welcome"> Welcome</h3>
+      <p> Thank you for your interest in Chobits Exchange(<a href="https://www.cbex.asia/">www.cbex.asia</a>). The primary service we provide is Chobits Bitcoin Limited Option. These options allow our customers to trade Bitcoin with leverage, without margin call or forced liquidation. We designed Bitcoin Limited Option in April, 2018. In order to let bitcoin investors feel more comfortable with leverage trading, we launched Chobits Exchange.</p>
+	  
+	  <p> This documentation is designed to be self contained. You don't need to have option trading experience before you read this document, nor you need to have a knowledge of leverage trading. You are supposed to know how to trade and use bitcoin. This document will not cover topics like what is bitcoin, how to buy and transfer bitcoin, what is bitcoin address, etc.</p>
+      
+      <h3 id="whatisblo"> What is Bitcoin Limited Option</h3>
+	  <p> Bitcoin Limited Option is a derivative of cash settled bitcoin inverse European style option. We are going to further explain this by introducing:</p>
+	  <ul>
+	    <li><a href="#wbloa" class=" ">What is a European style option</a></li>
+	    <li><a href="#wblob" class=" ">What is an inverse option</a></li>
+	    <li><a href="#wbloc" class=" ">What does Limited mean</a></li>
+	    <li><a href="#wblod" class=" ">Examples</a></li>
+	  </ul>
+	  
+	  <h4 id="wbloa"> What is a European style option?</h4>
+	  <p> A European style option is a contract between option seller and option buyer. The contract offers the buyer the right, but not the obligation, to buy (call option) or sell (put option) the underlying asset at an agreed-upon price on a specific date. The agreed-upon price is called the strike price. An option is cash settled means when the option is exercised, the option seller pays option buyer in cash if there is any profit. Physical delivery of underlying asset will not take place in a cash settled option.</p>
+	  <p> You can sell a call option to short the underlying asset, or buy a call option to long it. An example: </p>
+	  <p> The option buyer thought the stock price of Honda Motor would rise this year, while the option seller thought oppositely. So the option buyer bought a call option from the option seller, let's say, for 125 usd. The strike price was 50 usd per share, date of delivery was 365 days later, and the underlying asset was 100 shares of Honda Motor. That is to say, the call option buyer would have the right to buy 100 shares of Honda Motor from the call option seller at the price of 5,000 usd 365 days later. Suppose after 365 days, the price of Honda Motor is 70 usd per share, 20 usd higher than the call option's strike price, then the option seller should pay (70 - 50) * 100 = 2,000 usd to the call option buyer. The option buyer makes 2,000 - 125 = 1875 usd from this call option.</p>
+	  <p> You can sell a put option to long the underlying asset, or buy a put option to short it. An example: </p>
+	  <p> The option buyer thought the stock price of Honda Motor would drop this year, while the option seller thought oppositely. So the option buyer bought a put option from the option seller for 125 usd. The strike price was 50 usd per share, date of delivery was 365 days later, and the underlying asset was 100 shares of Honda Motor. Suppose after 365 days, the price of Honda Motor is 60 usd per share, higher than the put option's strike price. Then the option becomes worthless, since a rational option buyer will not sell a share for 50 usd when he can sell it for 60 usd. Thus the option seller makes 125 usd from this put option.</p>
+	  
+	  <h4 id="wblob"> What is an inverse option?</h4>
+	  <p> Bitcoin Limited Option operates in inverse option's manner. The underlying asset of these options are some US dollars. What you pay in US dollar in traditional options you pay them in bitcoin in inverse options. In this case, you long usd to short bitcoin, short usd to long bitcoin. </p>
+	  <p> You can sell an inverse call option to short usd, long bitcoin, or you can buy an inverse call option to long usd, short bitcoin. An example: </p>
+	  <p> Suppose there is an inverse call option, whose underlying asset is 10,000 US dollar. The option buyer thought the price of bitcoin will drop in this month, so he bought the inverse call option for 0.5 BTC (abbreviation for bitcoin) to long US dollar, short bitcoin. The strike price was 1 BTC, date of delivery was 30 days later. Suppose after 30 days, bitcoin price rises to 8,000 usd, or 1.25 BTC for 10,000 US dollar, 0.25 BTC higher than strike price. Then the inverse call option seller should pay 0.25 BTC to the buyer. The inverse call option seller still makes 0.5 - 0.25 = 0.25 BTC from this option.</p>
+	  <p> You can sell an inverse put option to long usd, short bitcoin, or you can buy an inverse put option to short usd, long bitcoin. An example: </p>
+	  <p> The inverse put option buyer thought bitcoin price would rise this month, while the option seller thought oppositely. So the option buyer bought an inverse put option from the seller for 0.1 BTC. The underlying asset was 10,000 usd, strike price was 1.25 BTC, date of delivery was 30 days later. That is to say, the inverse put option buyer would have the right to sell 10,000 usd to the buyer for 1.25 BTC after 30 days. Suppose the price of bitcoin is 10,000 usd after 30 days, or 1 BTC for 10,000 usd, 0.25 BTC lower than the strike price. Then the inverse put option seller should pay 0.25 BTC to option buyer. The option buyer makes 0.25 - 0.1 = 0.15 BTC from this inverse put option.<p>
+	  
+	  <h4 id="wbloc"> What does Limited mean?</h4>
+	  <p> Let's recall what is an inverse call option. Suppose the underlying asset is 10,000 US dollar, strike price is 1 BTC, date of delivery is 30 days later. Then a bitcoin inverse call option is:</p>
+	  <p> The option buyer will have the right to buy 10,000 US dollar for 1 BTC from the option seller 30 days later.</p>
+	  <p> If we impose some limitation on option seller's obligation, i.e set the maximum amount of bitcoin the seller would pay, and rewrite the inverse call option to this:</p>
+	  <p> The option buyer will have the right to buy 10,000 US dollar for 1 BTC from the option seller 30 days later, and the maximum amount of bitcoin the option buyer can win from the option seller is limited to 0.25 BTC.</p>
+	  <p> That is a Bitcoin Limited Option. In this case, if 30 days later the bitcoin price is 8,000 usd, or 1.25 BTC for 10,000 usd, the option seller should pay 0.25 BTC to the option buyer. If the bitcoin price is 5,000 usd 30 days later, or 2 BTC for 10,000 usd, the option seller only needs to pay 0.25 BTC to the option buyer, because the seller's obligation is limited to 0.25 BTC in that Bitcoin Limited Option.</p>
+	  <p> In short, a Bitcoin Limited Option offers the buyer the right to buy or sell the underlying asset (some US dollar) at an agreed-upon price on a specific date, and the maximum amount of bitcoin the buyer can receive from the seller is limited to a specific amount. The agreed-upon price is the strike price, and the imposed limitation defines another price called full profit price. If the price on the date of delivery hits the strike price, the buyer starts to make money from the option. If the price cross the strike price and hits the full profit price, the buyer cannot make more money from the option even if the price cross the full profit price and goes further, because the maximum profit of this option is limited.</p>
+	  <p> The most evident advantage of imposing this limitation is that margin call and forced liquidation are no longer needed. In Bitcoin Limited Option, the seller's margin deposit to maintain a position is his limited obligation to this option, i.e the maximum amount of bitcoin the seller would pay. The seller doesn't have to put additional margin deposit to maintain the position even if bitcoin price soars to 1 trillion US dollar or plunges to zero.</p>
+	  
+	  <h4 id="wblod"> Examples of Bitcoin Limited Option</h4>
+	  <p> You can sell a Bitcoin Limited Call Option to short US dollar and long bitcoin, or you can buy a Bitcoin Limited Call Option to long US dollar and short bitcoin. An example: </p>
+	  <p> The Bitcoin Limited Call Option buyer thought bitcoin price would drop in 30 days, while the seller thought oppositely. So the option buyer bought a Bitcoin Limited Call Option from the seller for 0.1 BTC. The underlying asset was 10,000 usd, and the strike price was 1 BTC ($10,000 per BTC), full profit price was 1.25 BTC ($8,000 per BTC). The bitcoin price was 9,000 usd when the option was bought, date of delivery was 30 days later. The seller deposited 0.25 BTC to margin this option.</p>
+	  <p> If on the date of delivery, bitcoin price is higher than 10,000 usd, i.e the underlying asset worths less than 1 BTC, the Bitcoin Limited Call Option becomes worthless. </p>
+	  <p> If on the date of delivery, bitcoin price is lower than 10,000 usd, e.g 8,500 usd, which is 1.176 BTC for 10,000 usd. Then the seller needs to pay 1.176 - 1 = 0.176 BTC to the buyer. </p>
+	  <p> If on the date of delivery, bitcoin price is lower than the full profit price 8,000 usd, e.g 5,000 usd, 2 BTC for 10,000 usd, then the seller needs to pay the maximum of 0.25 BTC to the buyer. </p>
+	  <p> You can sell a Bitcoin Limited Put Option to long US dollar and short bitcoin, or you can buy a Bitcoin Limited Put Option to short US dollar and long bitcoin. An example: </p>
+	  <p> The Bitcoin Limited Put Option buyer thought bitcoin price would rise in 30 days, while the seller thought oppositely. So the option buyer bought a Bitcoin Limited Put Option from the seller for 0.1 BTC. The underlying asset was 10,000 usd, and the strike price was 1.25 BTC ($8,000 per BTC), full profit price was 1 BTC ($10,000 per BTC). The bitcoin price was 9,000 when the option was bought, date of delivery was 30 days later. The seller deposited 0.25 BTC to margin this option. </p>
+	  <p> If on the date of delivery, bitcoin price is lower than 8,000 usd, i.e the underlying asset worths more than 1.25 BTC, the Bitcoin Limited Put Option becomes worthless. </p>
+	  <p> If on the date of delivery, bitcoin price is higher than 8,000 usd, e.g 8,500 usd, which is 1.176 BTC for 10,000 usd. Then the seller needs to pay 1.25 - 1.176 = 0.074 BTC to the buyer. </p>
+	  <p> If on the date of delivery, bitcoin price is higher than the full profit price 10,000 usd, e.g 20,000 usd, 0.5 BTC for 10,000 usd, then the seller needs to pay the maximum of 0.25 BTC to the buyer. </p>
+	  
+	  
+	  <h3 id="whyblo"> Why Choose Bitcoin Limited Option</h3>
+	  <p> There are already many kinds of leverage to trade bitcoin, including futures, inverse futures, perpetual contracts, options, etc. When compared to those leverages, Bitcoin Limited Options have unmatched advantages. </p>
+	  <h4> Leveraged Trade Without Margin Call</h4>
+	  <p> If you have traded bitcoin futures, you must understand why a leverage without margin call or forced liquidation is a great blessing. In bitcoin future market, even if you make a right decision, i.e to short bitcoin at a relatively high price, or to long bitcoin at a relatively low price, you may still lose money. Because a relatively high price or a relatively low price are defined at a large scale, no one can open a short position at the exact highest point or open a long position at the exact lowest point. Some fluctuations can trigger a forced liquidation. For example, bitcoin price is falling these months, a speculator thought this trend would continue and opened a short position in future market on May 24th, when bitcoin price was 7,300 usd. The leverage was 20 times, and one month later, on June 24th, bitcoin price was 5,779 usd. He ought to make a lot money by holding this position, but he actually ended up with a now-empty account. Because on June 3rd, bitcoin price reached 7,800 usd and his short position was forced liquidated. This is not an occasional case, you will find this universal by looking back history price. For some bitcoin future exchanges, forced liquidation is already a major source of profits. They carry out margin closeout when 80% of clients' margin is used, or even 60%. When the positions are liquidated, some surplus goes to these exchanges' profits. They also have a good reason to do this: the market depth is not sufficient to carry out forced liquidation at 100% of margin. However, Chobits's Bitcoin Limited Options will never be forced liquidated, since the upper bound of the seller's obligation is fixed. </p>
+	  <h4> Trading With High Leverage</h4>
+	  <p> Admittedly, the leverage of Bitcoin Limited Options is not linear, but it can be fairly high (or fairly low if you want). Consider this case: </p>
+	  <p> The option buyer thought bitcoin price will rise in this month, and decided to take a radical action (use high leverage). The Bitcoin Limited Put Option's underlying asset was 10,000 usd, the strike price was 1 BTC, and the full profit price was 0.8 BTC, or 12,500 usd per BTC. The date of delivery was 30 days later, and bitcoin price was 6,500 usd when he bought the option. The buyer bought the option for 0.002 BTC (which is a reasonable price, refer to <a href="#pric"> this question</a> in FAQ section of this documentation). Suppose bitcoin price doubled to 13,000 usd 30 days later, then the option buyer won 0.2 BTC from the option. The option buyer's account balance rose from 0.002 * 6,500 = 13 usd to 0.2 * 13,000 = 2,600 usd, as bitcoin price doubled in 30 days. That is equivalent to a 100 times leverage. And if the option buyer opened a long position with 100 times leverage on future market instead, margin call and forced liquidation are very likely to happen with such high leverage. <p>
+	  <h4> Trading with Fair Price</h4>
+	  <p> If your goal is trading with high leverage, and you don't like margin call, there are several choices for you besides Bitcoin Limited Option. The buyer of a traditional European option never run into forced liquidation. Binary options don’t have the concept of margin call, they neither have the concept of leverage rate. Gambling contracts on predicting future bitcoin prices have multiple forms. But if you care the extra price you pay for those leverage tools, you will find Bitcoin Limited Option the optimal choice. </p>
+	  <p> The buyer of traditional European options never face the problem of margin call, only the seller does. But this doesn't mean that the buyer doesn't pay a price for the potential forced liquidation. Due to the nonlinear leverage of options, the margin will be extremely high to maintain a position for the seller if there is a spike in bitcoin price. So some exchanges don’t allow customers to sell options, and they themselves are the only sellers. In order to make money in this business, they usually offer prices much higher than reasonable. Some option exchanges allow their customers to sell options. But they usually require the sellers to maintain a higher than reasonable margin for their positions. The sellers also need to keep an eye on their positions lest margin call happens. Due to the low liquidity of option market, forced liquidation for seller's position is more hurtful than liquidating a future position. All these costs add to the option price for a traditional European option, and all these costs don't exist in Bitcoin Limited Options. </p>
+	  <p> Binary options and gambling contracts are quite different from the conventional concept of leverage. Binary option buyer bet on whether the bitcoin price will go up or go down in a short period of time. The option seller, the exchange, make trading terms in favour of it, e.g if the buyer win the bet he gets 0.7 dollars, if the buyer lose the bet he lose 1 dollar. </p>
+	  <p> Gambling contracts have various forms, they seldom if ever are fair and transparent. </p>
+	  <p> Bitcoin Limited Options on Chobits Exchange don't have such implicit costs as mentioned above, and their prices are fair and lean due to adequate market competition. Trading on Chobits Exchange is transparent too, you can even see who you are making option contracts with. </p>
+	  <h4 id="lowfee"> Low Trading Fee</h4>
+	  <p> Chobits Exchange only charges a small portion of winner's net profit as trading fee. No profit, no fee. Some future exchanges charge less than 0.1 percent of trading amount as trading fee, this may sound low but let's do little math. Suppose the trading fee is 0.07 percent of a inverse future exchange, value for 1 share future is 100 US dollar, the trader uses 100 times leverage, and current bitcoin price is 8,000 usd. The trader opens 100 shares long position, the margin is 100 / 8,000 = 0.0125 BTC. Fee for opening is 0.0007 * (100 / 8,000) * 100 = 0.000875 BTC. If he closes the position also at the price of 8,000 usd, the fee for closing is also 0.000875 BTC. The trader loses (0.000875 * 2) / 0.0125 = 14 percent of money buy opening and closing at same price. If a similar case happens in Chobits Exchange, i.e the delivery price is very close to the price when the position opens, it is very likely that both sides of the option don't need to pay any fee. </p>
+	  
+	  <h3 id="howrig"> How to Register</h3>
+	  <p> As a part of our security strategy, Chobits Exchange saves your Email address offline. So the registration is a little different from other exchanges you may know. The following steps guide you to create a Chobits Exchange account, you may contact us if you need any help. </p>
+	  <p> First, you need an Email for registration, be sure to choose a secure Email provider. Then use that Email address to send the following message to ONE of our registration service Email box, registerchobits[AT]gmail.com or eroneko[AT]outlook.com (replace "[AT]" with "@"). </p>
+	  <p> *I apply for a standard accout on Chobits Exchange for this email address and I agree with the up to date user terms by using this account.*</p>
+	  <p> Normally, after you send that Email, you will receive an Email (not necessarily replied by the registration service Email box you send application to) containing your Email Verify Code within 3 work days. Do NOT believe any instructions in that Email, and do NOT reveal the Email Verify Code to others. </p>
+	  <p> After you receive the Email Verify Code, go to registration page and fill out the form. Your Chobits Exchange account is created. </p>
+	  
+	  
+	  <h3 id="howtop"> How to Top Up</h3>
+	  <p> After you create your account, you should top up your account before trading. The bitcoin top up address for you is on your account info page. You will receive your payment within 2 work days after your top up is confirmed by the bitcoin network. Minimum top up amount is 0.01 BTC, you may contact us if you need any help. </p>
+	  
+	  
+	  <h3 id="howtrade"> How to Trade Bitcoin Limited Options on Chobits Exchange</h3>
+	  <p> After you deposit some bitcoin in your account, you may start trading Bitcoin Limited Option. If you want to know what is Bitcoin Limited Option, <a href="#whatisblo" class=" ">Click here</a>. </p>
+	  <p> The underlying asset is shown on the market view page, and the limitation of seller's obligation is 0.01 BTC for each share of option. The date of delivery is the first and the third Saturday of each month, i.e options trade before the first Saturday of the month will be settled on the first Saturday, options trade after the first Saturday and before the third Saturday of the month will be settled on the third Saturday, options trade after the third Saturday will be settled on the first Saturday of next month. The delivery price will be the arithmetic average of bitcoin price between UTC 5:55 A.M. Saturday and UTC 6:05 A.M. Saturday. Bitcoin price is calculated by (Bitfinex bitcoin price + Coinbase bitcoin price + Bitstamp bitcoin price) / 3, and if any of these three prices is not available, the price will be the arithmetic average of the rest. If bitcoin price fluctuates dramatically during that 10 minutes, the delivery will be postponed to 15 minutes later, and so on. </p>
+	  <p> There are several Bitcoin Limited Options on the market view page you can choose from. They are divided into two types: </p>
+	  <p> The TYPE A options. These options are Bitcoin Limited Call Options. The buyer has the right to buy the underlying asset at the strike price on date of delivery, and the seller's obligation is limited to 0.01 BTC. You can SELL TYPE A options to LONG Bitcoin and SHORT US Dollar, BUY TYPE A options to SHORT Bitcoin and LONG US Dollar. </p>
+	  <p> The TYPE B options. These options are Bitcoin Limited Put Options. The buyer has the right to sell the underlying asset at the strike price on date of delivery, and the seller's obligation is limited to 0.01 BTC. You can SELL TYPE B options to LONG US Dollar and SHORT Bitcoin, BUY TYPE B options to SHORT US Dollar and LONG Bitcoin. </p>
+	  <p> Their titles cover some basic information about them. For example, suppose the underlying asset is 660 US dollar, in title 'TYPE A1: 0.09 BTC to 0.1 BTC Strike price: 7333.3 USD Full profit price: 6600 USD', 'TYPE A1' means this is a TYPE A option, 0.09 BTC is the strike price for the underlying asset in this option, and its equivalent in the form of bitcoin price is 7333.3 usd (660 / 0.09 = 7333.3), 0.1 BTC is the full profit price, and its equivalent in the form of bitcoin price is 6600 usd (660 / 0.1 = 6600). Similarly, in title 'TYPE B3: 0.12 BTC to 0.11 BTC Strike price: 5500 USD Full profit price: 6000 USD', 'TYPE B3' means this is a TYPE B option, 0.12 BTC is the strike price, and its equivalent in the form of bitcoin price is 5500 usd (660 / 0.12 = 5500), 0.11 BTC is the full profit price, and its equivalent in the form of bitcoin price is 6000 usd (660 / 0.11 = 6000). </p>
+	  <p> On order pannel of each option, you can see the orderbook and make limit orders by submit the order form. Be aware that if you offer a price more advantageous than your counterparty, the deal price will be your price. e.g if the highest bid order in orderbook is 0.002 BTC for 100 shares, if you make an ask order for 0.0018 BTC for 60 shares, the deal price will be 0.0018 BTC. </p>
+	  
+	  
+	  <h3 id="howwithdraw"> How to Withdraw</h3>
+	  <p> The following steps guide you to withdraw bitcoin from Chobits Exchange, you may contact us if you need any help. </p>
+	  <p> First, use you registration Email address to send following message to ONE of our withdraw service Email boxs withdrawchobits[AT]gmail.com or rurishi[AT]outlook.com (replace "[AT]" with "@"). </p>
+	  <p> *Withdraw [AMOUNT] bitcoins to [ADDRESS].* </p>
+	  <p> Replace [AMOUNT] and [ADDRESS] with the amount of bitcoin you want to withdraw and the bitcoin address you want to withdraw to. Minimum withdraw amount is 0.01 BTC. </p>
+	  <p> Fill out the form on withdraw page. The withdraw amount should be exactly the same as that in Email. If the withdraw amount you submit on withdraw page does not conform to that in Email, this withdraw request will be denied. Do NOT send multiple requests for one withdraw order, or only one or none of your withdraw order will be carried out. A small amount of bitcoin will be charged to cover the transaction fee. The amount depends on network condition. You will be able to see your withdraw on bitcoin network within 2 work days after you submit the withdraw order. </p>
+	  
+	  
+	  <h3 id="contact"> Contact Us</h3>
+	  <p> If you have any questions, please send Email to darjeeling410[AT]gmail.com</p>
+	  <p> If you are in trouble or you want to report a problem, please contact tenwanji[AT]gmail.com</p>
+	  
+	  <h3 id="fee"> Trade Fee</h3>
+	  <p> Chobits Exchange only charges a small portion of winner's NET profit as trading fee. You don't make money from trading Bitcoin Limited Options on Chobits Exchange, you don’t pay any trading fee. If you make money, Chobits Exchange only charges a small portion from your net earnings. Currently the rate is 15%, and in most cases this is much lower than 0.07% fee rate in future exchanges, as we discussed in <a href="#lowfee" class=" ">this part</a>. No other fees are charged. </p>
+	  
+	  <h3 id="security"> Security Strategy</h3>
+	  <p> Besides adopting most mainstream security measures, our unique security mechanism will keep your assets safe even if malicious users acquired the root permission of this site(very unlikely). Including and not limited to: saving clients information offline, manual and algorithm based anti-fraud check, anit-tunneling penalty. Details are not to be elaborated here for security concerns. </p>
+	  
+	  <h3 id="faq"> Frequently Asked Questions</h3>
+	  <h4 id="pric"> I'm not sure what is a appropriate price for a Bitcoin Limited Option?</h4>
+	  <p> The value of a Bitcoin Limited Call (Put) Option is the value of a traditional European call (put) option whose strike price is the Bitcoin Limited Call (Put) Option's strike price, minus the value of a traditional European call (put) option whose strike price is the Bitcoin Limited Option's full profit price. Pricing for traditional European options is mature, you can even find some option price calculators available on internet. If you need a suggested price for any Bitcoin Limited Option on Chobits Exchange, click the BASE PRICE button on order pannel page of that option, and it will tell you how to do it. Finally, even you make a deal at the price far from the suggested price, you still have a good chance to win, because that's a feature of options. </p>
+	  <h4> What if there is something doesn't work correctly in trading?</h4>
+	  <p> Please contact us and report that problem immediately. If the problem really affect some filled deals, we will roll back trade history for those affected or all traders to the time point when market is normal. </p>
+	  <h4> Web page doesn't display correctly.</h4>
+	  <p> Use the latest desktop version Firefox, Microsoft Edge or Chrome browsers to open it, and it should look properly. </p>
+	  
+	  
+    </div>
+  </div>
+</section>
+<section class="vibrant centered">
+  <div class="container">
+    <h4>Documentation of www.cbex.asia</h4>
+  </div>
+</section>
+<script src="js/jquery.min.js"></script> 
+ 
+<script type="text/javascript" src="js/prettify/prettify.js"></script> 
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=css&skin=sunburst"></script>
+<script src="js/layout.js"></script>
+ <script src="js/jquery.localscroll-1.2.7.js" type="text/javascript"></script>
+ <script src="js/jquery.scrollTo-1.4.3.1.js" type="text/javascript"></script>
+</body>
+</html>
